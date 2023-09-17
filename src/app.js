@@ -94,6 +94,6 @@ app.put('/products/:pid', async(req,res) => {
             res.status(200).json({message:'Product updated.', ProductUpdated : prodUpdated})
         }
     } catch (error) {
-        
+        res.status(500).json({ message: error })
     }
 })
